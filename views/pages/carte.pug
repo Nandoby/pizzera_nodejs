@@ -1,0 +1,10 @@
+extends ../layout
+
+block content
+    section(class="container" style="padding-top:5rem")
+        div.d-flex.justify-content-center.gap-10.flex-wrap
+            each p in pizzas
+                div(class="card") 
+                    a(href="/pizza/"+p.id)
+                        img(src="images/"+p.img)
+                    h4(style="margin-top:1rem") #{p.name}

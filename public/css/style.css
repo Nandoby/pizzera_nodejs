@@ -103,6 +103,14 @@ header nav ul a:hover {
 	width: 50%;
 }
 
+.justify-content-center {
+	justify-content: center;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
 .gap-10 {
 	gap: 10px;
 }
@@ -110,6 +118,19 @@ header nav ul a:hover {
 /*** Main ***/
 main {
     flex: 1 1 auto;
+}
+
+.card {
+	flex: 0 1 20%;
+	padding: 1rem;
+	background: #f2f2f2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.card img {
+	width: 100%;
 }
 
 
