@@ -7,4 +7,4 @@ block content
                 div(class="card") 
                     a(href="/pizza/"+p.id)
                         img(src=(p.img.startsWith('http') ? p.img : 'images/' + p.img), height="250")
-                    h4(style="margin-top:1rem") #{p.name}
+                    h4 #{p.name.charAt(0).toUpperCase() + p.name.slice(1)}
