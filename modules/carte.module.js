@@ -28,11 +28,21 @@ const pizzas = [
   },
 ];
 
+let currentId = 3
+
 const carteModule = {
   getMenu: () => pizzas,
   getPizza: (id) => {
     return pizzas.find((item) => item.id === id);
   },
+  addPizza: (pizza) => {
+    const pizzaToAdd = {
+      id: ++currentId,
+      ...pizza
+    }
+
+    pizzas.push(pizzaToAdd)
+  }
 };
 
 module.exports = carteModule;

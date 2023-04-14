@@ -12,3 +12,26 @@ html(lang="fr")
         main
             block content 
         include ./partials/footer
+
+        script 
+            include ../public/js/index.js
+
+        script.
+            function add(e) {
+                e.preventDefault()
+                const parent = e.target.parentNode.parentNode
+
+                const input = document.createElement('input')
+                input.classList.add('flex-fill')
+                input.style.padding = '10px 15px'
+                input.name="ingredients[]"
+
+                const div = document.createElement('div')
+                div.classList.add('d-flex', 'mt-10')
+
+                div.appendChild(input)
+
+
+                parent.appendChild(div)
+
+            }

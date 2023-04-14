@@ -1,0 +1,29 @@
+extends ../layout
+
+block content 
+    div.container
+        h1(style="margin-top: 2rem; font-size: 1.5rem; font-weight: 600") Ajouter une pizza
+
+        form(action="", method="POST")
+            div.mt-20.d-flex.align-items-center
+                label(for="name", style="width:150px") Nom 
+                input(type='text', name='name', id="name" class="flex-fill", style="padding: 10px 15px;font-size:1rem")
+            div.mt-20.d-flex.align-items-center
+                label(for="price", style="width:150px") Prix
+                input(type="number", name="price", id="price" class="flex-fill", style="padding: 10px 15px;font-size:1rem")
+            div.mt-20.d-flex.align-items-center
+                label(for="img", style="width:150px") URL de l'image
+                input(type="url", name="img", id="img" class="flex-fill", style="padding: 10px 15px;font-size:1rem")
+            div.mt-20.d-flex
+                label(for="description", style="width:150px") Description
+                textarea(type="url", name="description", id="description" class="flex-fill", style="padding: 10px 15px;font-size:1rem;height:300px")
+            div.mt-20.d-flex.align-items-center
+                label(for="ingredients", style="width:150px") Ingrédients
+                div(class="flex-fill")
+                    div.d-flex
+                        input(type="text" name="ingredients[]" class="flex-fill" style="padding: 10px 15px")
+                        button.ml-10.btn.btn-primary(onclick="add(event)") Ajouter
+                
+
+
+            input(type="submit" value="Confirmer" class="btn btn-success mt-20")

@@ -4,7 +4,7 @@ block content
     .container
         div(style="padding-top: 4rem;" class="d-flex gap-10")
             div(class="flex-50")
-                img(src="../images/"+pizza.img)
+                img(src=(pizza.img.startsWith('http') ? pizza.img : "../images/"+pizza.img))
             div(class="flex-50")
                 h2(style="font-size:3rem; text-align: center;") #{pizza.name}
                 h4(style="margin-top: 2rem")

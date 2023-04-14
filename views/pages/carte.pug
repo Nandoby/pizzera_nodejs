@@ -6,5 +6,5 @@ block content
             each p in pizzas
                 div(class="card") 
                     a(href="/pizza/"+p.id)
-                        img(src="images/"+p.img)
+                        img(src=(p.img.startsWith('http') ? p.img : 'images/' + p.img), height="250")
                     h4(style="margin-top:1rem") #{p.name}
